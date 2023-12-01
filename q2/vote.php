@@ -11,7 +11,6 @@
 <header class="p-5">
     <h1 class="text-center">問卷投票</h1>
 </header>    
-<body>
 <main class='container'>
 <?php 
 $subject=$Que->find($_GET['id']);
