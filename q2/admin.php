@@ -1,3 +1,4 @@
+<?php include_once "db.php";?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,6 +37,34 @@
     </form>
 </fieldset>
 
+<fieldset>
+    <legend>問卷列表</legend>
+    <div class="col-9 mx-auto">
+    <table class="table">
+    <tr>
+        <td>編號</td>
+        <td>主題內容</td>
+        <td>操作</td>
+    </tr>
+    <?php
+    $ques=$Que->all(['subject_id'=>0]);
+    foreach($ques as $idx => $que){
+    ?>
+    <tr>
+        <td><?=$idx;?></td>
+        <td><?=$que['text'];?></td>
+        <td>
+            <button class="btn btn-info">顯示</button>
+            <button class="btn btn-success">編輯</button>
+            <button class="btn btn-danger">刪除</button>
+        </td>
+    </tr>
+    <?php
+    }
+    ?>
+    </table>
+    </div>
+</fieldset>
 
 </main>
 
