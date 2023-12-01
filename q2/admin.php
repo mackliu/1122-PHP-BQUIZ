@@ -14,7 +14,7 @@
 <main class="container p-3">
 <fieldset>
     <legend>新增問卷</legend>
-    <form action="add_que.php" method="post">
+    <form action="./api/add_que.php" method="post">
     <!--主題-->
     <div class="d-flex">
         <div class="col-3 bg-light p-2">問卷名稱</div>
@@ -51,12 +51,14 @@
     foreach($ques as $idx => $que){
     ?>
     <tr>
-        <td><?=$idx;?></td>
+        <td><?=$idx+1;?></td>
         <td><?=$que['text'];?></td>
         <td>
             <button class="btn btn-info">顯示</button>
             <button class="btn btn-success">編輯</button>
-            <button class="btn btn-danger">刪除</button>
+            <a href="./api/del.php?id=<?=$que['id'];?>">
+                <button class="btn btn-danger">刪除</button>
+            </a>
         </td>
     </tr>
     <?php
