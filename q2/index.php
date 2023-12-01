@@ -31,7 +31,7 @@
             <td><?=$idx+1;?></td>
             <td><?=$que['text'];?></td>
             <td><?=$que['count'];?></td>
-            <td><a class='btn btn-info' href="result.php?id=<?=$que['id'];?>">投票結果</td>
+            <td><a class='btn btn-info' href="result.php?id=<?=$que['id'];?>">投票結果</a></td>
             <td>
                 <a class='btn btn-warning' href="vote.php?id=<?=$que['id'];?>">我要投票</a>
             </td>
@@ -40,11 +40,7 @@
     }
     ?>
     </table>
-
-
-
 </fieldset>
-
 <script src="../js/jquery-3.4.1.min.js"></script>
 <script src="../js/bootstrap.js"></script>
 </main>
